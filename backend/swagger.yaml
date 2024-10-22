@@ -1,0 +1,113 @@
+openapi: 3.0.1
+info:
+  title: Broker API
+  description: API for managing brokers
+  version: 1.0.0
+paths:
+  /brokers:
+    get:
+      summary: Find brokers by name
+      description: Retrieve a list of brokers matching the search query.
+      parameters:
+        - in: query
+          name: search
+          schema:
+            type: string
+          required: true
+          description: The name of the broker to search for (supports partial matches).
+        - in: query
+          name: cursor
+          schema:
+            type: integer
+            default: 0
+          description: Pagination cursor to skip a specific number of brokers.
+      responses:
+        '200':
+          description: A list of brokers.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Broker'
+        '400':
+          description: Invalid search query or other error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new broker
+      description: Add a new broker to the database.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewBroker'
+      responses:
+        '201':
+          description: Broker successfully created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Broker'
+        '400':
+          description: Invalid input or other error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Broker:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique identifier for the broker.
+        name:
+          type: string
+          description: The name of the broker.
+        address:
+          type: string
+          description: The broker's address.
+        city:
+          type: string
+          description: The city where the broker is located.
+        country:
+          type: string
+          description: The country where the broker is located.
+      required:
+        - id
+        - name
+        - address
+        - city
+        - country
+    NewBroker:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the broker.
+        address:
+          type: string
+          description: The broker's address.
+        city:
+          type: string
+          description: The city where the broker is located.
+        country:
+          type: string
+          description: The country where the broker is located.
+      required:
+        - name
+        - address
+        - city
+        - country
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message.

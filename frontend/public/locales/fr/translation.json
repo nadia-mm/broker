@@ -1,0 +1,16 @@
+{
+  "Save": "Enregistrer",
+  "Cancel": "Annuler",
+  "Add manually": "Ajouter manuellement",
+  "Managing broker": "Gestion du courtier",
+  "Name": "Nom",
+  "Address": "Adresse",
+  "City": "Ville",
+  "Country": "Pays",
+  "Tutorial": "Veuillez entrer les coordonnées du courtier",
+  "Loading": "Patientez",
+  "Close": "Fermer",
+  "ErrorMessage": "Une erreur est survenue.",
+  "SaveBrokerSuccessMessage": "Le courtier a été enregistré avec succès.",
+  "No result": "Aucun result."
+}

@@ -1,0 +1,50 @@
+version: '3.9'
+name: 'broker'
+
+services:
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports: 
+      - 5173:5173
+    volumes: 
+      - ./frontend/src:/app/src
+    depends_on:
+      - backend
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports: 
+      - 5000:5000
+    volumes: 
+      - ./backend/src:/app/src
+    environment:
+      - PORT = 5000
+      - MONGO_URI = mongodb+srv://root:root@databasetest.k91eiio.mongodb.net/
+    depends_on:
+      - database
+    networks:
+      - broker-network
+
+  database:
+    image: mongo:6.0.2
+    ports:
+      - '27017:27017'
+
+  swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      - '8080:8080'
+    environment:
+      - SWAGGER_JSON=/api-docs/swagger.yaml
+    volumes:
+      - ./backend/swagger.yaml:/api-docs/swagger.yaml
+    depends_on:
+      - backend
+
+networks:
+  broker-network:
+    driver: bridge

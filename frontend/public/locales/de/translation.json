@@ -1,0 +1,16 @@
+{
+  "Save": "Speichern",
+  "Cancel": "Abbrechen",
+  "Add manually": "Manuell hinzufügen",
+  "Managing broker": "Makler verwalten",
+  "Name": "Name",
+  "Address": "Adresse",
+  "City": "Stadt",
+  "Country": "Land",
+  "Tutorial": "Bitte geben Sie die Kontaktdaten des Maklers ein",
+  "Loading": "Wird geladen",
+  "Close": "Schliessen",
+  "ErrorMessage": "Ein Fehler ist aufgetreten.",
+  "SaveBrokerSuccessMessage": "Makler wurde erfolgreich gespeichert.",
+   "No result": "Kein Ergebnis."
+}

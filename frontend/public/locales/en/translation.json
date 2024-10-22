@@ -1,0 +1,16 @@
+{
+  "Save": "Save",
+  "Cancel": "Cancel",
+  "Add manually": "Add manually",
+  "Managing broker": "Managing broker",
+  "Name": "Name",
+  "Address": "Address",
+  "City": "City",
+  "Country": "Country",
+  "Tutorial": "Please enter the contact details of the brocker",
+  "Loading": "Loading",
+  "Close": "Close",
+  "ErrorMessage": "An error occured.",
+  "SaveBrokerSuccessMessage": "Broker has been successfully saved.",
+  "No result": "No result."
+}
