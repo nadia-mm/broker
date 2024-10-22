@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Broker Management App is designed for commercial owners to manage brokers efficiently. It allows users to search for a broker's complete address by entering the broker's name. Users can view search results in a dropdown list, select a broker, and see the broker's details displayed in a card format. If the search results don't meet the user's needs, they can add a new managing broker manually by clicking "Add manually" to complete the proposal.
+The Broker Management App is designed for commercial owners to manage brokers efficiently. It allows users to search for a broker's complete address by entering the broker's name. Users can view search results in a dropdown list and select a broker. If the search results don't meet the user's needs, they can add a new managing broker manually by clicking "Add manually" to complete the proposal.
 
 ## Features
 
