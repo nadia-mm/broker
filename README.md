@@ -11,7 +11,7 @@ The Broker Management App is designed for commercial owners to manage brokers ef
 
 ## Technology Stack
 
-- **Frontend**: React, Vite, Material-UI
+- **Frontend**: React, Vite, Material-UI, i18n
 - **Backend**: Node.js, Express, MongoDB
 - **Database**: MongoDB
 - **State Management**: React Query for efficient data fetching
