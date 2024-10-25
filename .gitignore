@@ -25,3 +25,4 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+netlify_auth_token: nfp_CQSHwUNP8FbmpfWwhbpvWpiDXUNbs3Uq6c72

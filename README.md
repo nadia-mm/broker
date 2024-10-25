@@ -59,9 +59,9 @@ There are two ways to run the app:
    ```
 
 3. **Set Up Environment Variables**:
-   Create a `.env` file in the `backend` directory with your MongoDB connection string:
+   Create a `.env`(already done) file in the `backend` directory with your MongoDB connection string:
    ```plaintext
-   MONGO_URI=<MONGO_URI>>
+   MONGO_URI=<MONGO_URI>
    PORT=5000
    ```
 
@@ -117,6 +117,7 @@ There are two ways to run the app:
 
 ## Testing
 
+Cypress test is not working at the moment.
 For frontend testing, you can run:
 
 ```bash
